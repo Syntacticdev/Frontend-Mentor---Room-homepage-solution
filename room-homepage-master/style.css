@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 35vw;
+  padding: 40px;
+  top: 0;
+  z-index: 4;
+}
+
+
+.toggleMenuBtn {
+  display: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navigation li {
+  margin-right: 25px;
+}
+
+.navigation li a {
+  color: #fff;
+}
+.section-one {
+  height: 65vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  max-width: 100%;
+  position: relative;
+}
+.mob {
+  display: none;
+}
+.product-sample {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-sample img {
+  width: 100%;
+  height: 80%;
+}
+.products_guide {
+  position: relative;
+}
+.products_guide .swiper-slide {
+  padding: 100px 60px 100px 60px;
+}
+
+.products_guide .swiper-slide h1 {
+  font-size: 35px;
+}
+
+.products_guide .swiper-slide p {
+  margin-top: 20px;
+}
+
+.swiper-slide > img {
+  width: 100%;
+  object-fit: contain;
+}
+.action_slide_btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.action_slide_btn {
+  background: hsl(0, 0%, 0%);
+}
+
+.action_slide_btn button {
+  margin: 0;
+  padding: 20px 26px;
+  outline: none;
+  border: none;
+  background-color: hsl(0, 0%, 0%);
+}
+
+.section-two {
+  height: 35vh;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+
+.section-two img {
+  width: 100%;
+}
+
+p{
+  color: hsl(0, 0%, 63%);
+}
+
+.about_furniture {
+  padding: 70px 50px;
+}
+
+.about_furniture h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+}
+
+.about_furniture p {
+  font-size: 10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  all: unset;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  all: unset;
+}
+
+.shopNowLink {
+  font-size: 12px;
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.shopNowLink img {
+  margin-left: 10px;
+}
+
+.shopNowLink:hover {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+@media screen and (max-width: 765px) {
+  header {
+    justify-content: s;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .navigation {
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 20px;
+  }
+
+  .text-logo {
+    flex-basis: 60%;
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+  .navigation li a {
+    color: hsl(0, 0%, 0%);
+    font-weight: 900;
+  }
+  .toggleMenuBtn {
+    display: flex;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .closeMenuBtn {
+    background: transparent;
+    border: none;
+    padding-right: 30px;
+    outline: none;
+  }
+  .section-one {
+    height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products_guide {
+    position: relative;
+  }
+
+  .action_slide_btn {
+    z-index: 5;
+    bottom: 100%;
+    left: 72%;
+}
+
+  .section-two {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .desk {
+    display: none;
+  }
+  .mob {
+    display: grid;
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Room homepage</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button class="toggleMenuBtn">
+        <img src="./images/icon-hamburger.svg" alt="" />
+      </button>
+      <a href="" class="text-logo"><img src="./images/logo.svg" alt="" /></a>
+      <ul class="navigation">
+        <button class="closeMenuBtn"><img src="./images/icon-close.svg" alt=""></button>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <section class="section-one">
+      <div class="product-sample">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/desktop-image-hero-1.jpg" alt="" class="desk" />
+              <img src="./images/mobile-image-hero-1.jpg" alt="" class="mob" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/desktop-image-hero-2.jpg" alt="" class="desk" />
+              <img src="./images/mobile-image-hero-2.jpg" alt="" class="mob" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/desktop-image-hero-3.jpg" alt="" class="desk" />
+              <img src="./images/mobile-image-hero-3.jpg" alt="" class="mob" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products_guide">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h2>Discover innovative ways to decorate</h2>
+              <p>
+                We provide unmatched quality, comfort, and style for property
+                owners across the country. Our experts combine form and function
+                in bringing your vision to life. Create a room in your own style
+                with our collection and make your property a reflection of you
+                and what you love.
+              </p>
+              <a href="" class="shopNowLink">
+                Shop now <img src="./images/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <h2>We are available all across the globe</h2>
+              <p>
+                With stores all over the world, it's easy for you to find
+                furniture for your home or place of business. Locally, we’re in
+                most major cities throughout the country. Find the branch
+                nearest you using our store locator. Any questions? Don't
+                hesitate to contact us today.
+              </p>
+              <a href="" class="shopNowLink">
+                Shop now <img src="./images/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <h2>Manufactured with the best materials</h2>
+              <p>
+                Our modern furniture store provide a high level of quality. Our
+                company has invested in advanced technology to ensure that every
+                product is made as perfect and as consistent as possible. With
+                three decades of experience in this industry, we understand what
+                customers want for their home and office.
+              </p>
+              <a href="" class="shopNowLink">
+                Shop now <img src="./images/icon-arrow.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="action_slide_btn">
+          <button class="swiper-button-next">
+            <img src="./images/icon-angle-left.svg" alt="" />
+          </button>
+          <button class="swiper-button-prev">
+            <img src="./images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-two">
+      <div>
+        <img src="./images/image-about-dark.jpg" alt="" />
+      </div>
+      <div class="about_furniture">
+        <h3>About our furniture</h3>
+        <p>
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </div>
+      <div>
+        <img src="./images/image-about-light.jpg" alt="" />
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        // pagination: {
+        //   el: '.swiper-pagination',
+        // },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+      });
+
+       const toggleMenuBtn = document.querySelector('.toggleMenuBtn')
+       const closeMenuBtn = document.querySelector('.closeMenuBtn')
+
+      toggleMenuBtn.addEventListener('click',()=>{
+        document.querySelector('.navigation').classList.add('active')
+      })
+
+      closeMenuBtn.addEventListener('click',()=>{
+        document.querySelector('.navigation').classList.remove('active')
+      })
+
+    </script>
+  </body>
+</html>
